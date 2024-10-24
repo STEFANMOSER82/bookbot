@@ -5,7 +5,8 @@ def main():
     #print(text)
     wordcount = count_words(text)
     print(wordcount)
-
+    chardictionary = count_characters(text)
+    print(chardictionary)
 
 
 def open_book(path):
@@ -18,6 +19,16 @@ def count_words(text):
     for word in text.split():
         i += 1
     return i
+
+def count_characters(text):
+    chardict = {}
+    for char in text.lower():
+        if char in chardict:
+            chardict[char] += 1
+        else:
+            chardict[char] = 1
+    return chardict
+
 
 
 main()
