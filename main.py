@@ -20,7 +20,6 @@ def main():
     print("--- End report ---")
 
 
-
 def open_book(path):
     with open(path) as f:
         return f.read()
